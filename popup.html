@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+    
+    <title>Password Hash Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 200px;
+        padding: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      button {
+        width: 100%;
+        padding: 8px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Password Hash Generator</h1>
+    <input
+      type="password"
+      id="passwordInput"
+      placeholder="Enter your password"
+    />
+    <button id="generateButton">Generate Hash</button>
+    <div id="hashResult"></div>
+    <!-- Load bcryptjs library -->
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs/dist/bcrypt.min.js"></script>
+    <!-- Load your popup.js script -->
+    <script src="popup.js"></script>
+  </body>
+</html>
